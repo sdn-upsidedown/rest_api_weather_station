@@ -83,16 +83,16 @@ def post_base_data(request):
 
             new_weather_data_object.save()
             
-            print("Adding {}".format(d))
+            # print("Adding {}".format(d))
 
             # Tests
 
-            print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
+            # print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
 
-            inc += 1
+            # inc += 1
 
-            if inc == 1000:
-                return Response(data)
+            # if inc == 1000:
+            #     return Response(data)
 
 
     # Pour chaque ligne insertion dans la base de données
