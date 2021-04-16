@@ -89,10 +89,10 @@ def post_base_data(request):
 
             # print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
 
-            # inc += 1
+            inc += 1
 
-            # if inc == 1000:
-            #     return Response(data)
+            if inc == 1000:
+                return Response(data)
 
 
     # Pour chaque ligne insertion dans la base de données
