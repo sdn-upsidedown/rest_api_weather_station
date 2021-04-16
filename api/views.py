@@ -40,14 +40,14 @@ def post_base_data(request):
     file_path = os.path.join(settings.STATIC_ROOT, 'base_datas.json')
     base_data = open(file_path, 'r')
     
-    # inc = 0
+    inc = 0
 
     if request.method == 'POST':
         for element in base_data:
             # On transforme l'élément en données json
             d = json.loads(element)
 
-            # data[inc] = d
+            data[inc] = d
 
             # On récupère les éléments qui nous intéresse
             try:
@@ -80,19 +80,17 @@ def post_base_data(request):
                 light=light,
                 date=date
             )
-            if new_weather_data_object.save():
-                print("{} successfully added".format(d))
-            else:
-                print("Error while adding {}".format(d))
+            
+            print("Error while adding {}".format(d))
 
             # Tests
 
             # print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
 
-            # inc += 1
+            inc += 1
 
-            # if inc==10:
-            #     return Response(data)
+            if inc == 1000:
+                return Response(data)
 
 
     # Pour chaque ligne insertion dans la base de données
