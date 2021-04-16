@@ -80,12 +80,14 @@ def post_base_data(request):
                 light=light,
                 date=date
             )
+
+            new_weather_data_object.save()
             
-            print("Error while adding {}".format(d))
+            print("Adding {}".format(d))
 
             # Tests
 
-            # print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
+            print("{} {} {} {} {}\n".format(humidity, pressure, light, temperature, date))
 
             inc += 1
 
