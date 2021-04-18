@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-z^)*hh&v#-k633r8$89zi(m484_h+&b3%yq&lfmjobdh&kn)*(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://upsidedownwheatherapi.herokuapp.com',
+    'https://upsidedownweatherapi.herokuapp.com',
 ]
 
 
