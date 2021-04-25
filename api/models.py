@@ -11,3 +11,7 @@ class WeatherData(models.Model):
 
     def __str__(self):
         return "{}".format(self.date)
+
+# class StationController(models.Model):
+#     power = models.PositiveSmallIntegerField(null=True)
+#     sleep_mode = models.BooleanField(default=True)
