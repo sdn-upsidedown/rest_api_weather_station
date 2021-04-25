@@ -151,7 +151,7 @@ def post_base_data(request):
 
             inc += 1
 
-            if inc == 1000:
+            if inc == 3000:
                 return Response(data)
 
 
